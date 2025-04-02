@@ -37,6 +37,7 @@ public class RomanToInteger {
      */
 
     public int romanToInt(String s) {
-        int R_hundred = s % 1000;
+        int R_hundred = 1;
+        return 0;
     }
 }
