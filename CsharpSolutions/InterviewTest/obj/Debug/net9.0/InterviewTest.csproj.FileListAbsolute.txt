@@ -1,0 +1,15 @@
+/Users/anbosmac/Desktop/CodeBase/NeetCode/CsharpSolutions/InterviewTest/bin/Debug/net9.0/InterviewTest
+/Users/anbosmac/Desktop/CodeBase/NeetCode/CsharpSolutions/InterviewTest/bin/Debug/net9.0/InterviewTest.deps.json
+/Users/anbosmac/Desktop/CodeBase/NeetCode/CsharpSolutions/InterviewTest/bin/Debug/net9.0/InterviewTest.runtimeconfig.json
+/Users/anbosmac/Desktop/CodeBase/NeetCode/CsharpSolutions/InterviewTest/bin/Debug/net9.0/InterviewTest.dll
+/Users/anbosmac/Desktop/CodeBase/NeetCode/CsharpSolutions/InterviewTest/bin/Debug/net9.0/InterviewTest.pdb
+/Users/anbosmac/Desktop/CodeBase/NeetCode/CsharpSolutions/InterviewTest/obj/Debug/net9.0/InterviewTest.GeneratedMSBuildEditorConfig.editorconfig
+/Users/anbosmac/Desktop/CodeBase/NeetCode/CsharpSolutions/InterviewTest/obj/Debug/net9.0/InterviewTest.AssemblyInfoInputs.cache
+/Users/anbosmac/Desktop/CodeBase/NeetCode/CsharpSolutions/InterviewTest/obj/Debug/net9.0/InterviewTest.AssemblyInfo.cs
+/Users/anbosmac/Desktop/CodeBase/NeetCode/CsharpSolutions/InterviewTest/obj/Debug/net9.0/InterviewTest.csproj.CoreCompileInputs.cache
+/Users/anbosmac/Desktop/CodeBase/NeetCode/CsharpSolutions/InterviewTest/obj/Debug/net9.0/InterviewTest.sourcelink.json
+/Users/anbosmac/Desktop/CodeBase/NeetCode/CsharpSolutions/InterviewTest/obj/Debug/net9.0/InterviewTest.dll
+/Users/anbosmac/Desktop/CodeBase/NeetCode/CsharpSolutions/InterviewTest/obj/Debug/net9.0/refint/InterviewTest.dll
+/Users/anbosmac/Desktop/CodeBase/NeetCode/CsharpSolutions/InterviewTest/obj/Debug/net9.0/InterviewTest.pdb
+/Users/anbosmac/Desktop/CodeBase/NeetCode/CsharpSolutions/InterviewTest/obj/Debug/net9.0/InterviewTest.genruntimeconfig.cache
+/Users/anbosmac/Desktop/CodeBase/NeetCode/CsharpSolutions/InterviewTest/obj/Debug/net9.0/ref/InterviewTest.dll
