@@ -411,6 +411,16 @@
         "build": {
           "build/net6.0/xunit.runner.visualstudio.props": {}
         }
+      },
+      "InterviewCoding/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/InterviewCoding.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InterviewCoding.dll": {}
+        }
       }
     }
   },
@@ -932,10 +942,16 @@
         "xunit.runner.visualstudio.2.8.2.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
+    },
+    "InterviewCoding/1.0.0": {
+      "type": "project",
+      "path": "../InterviewCoding/InterviewCoding.csproj",
+      "msbuildProject": "../InterviewCoding/InterviewCoding.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "InterviewCoding >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 17.12.0",
       "coverlet.collector >= 6.0.2",
       "xunit >= 2.9.2",
@@ -966,7 +982,11 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/anbosmac/Desktop/CodeBase/NeetCode/CsharpSolutions/InterviewCoding/InterviewCoding.csproj": {
+              "projectPath": "/Users/anbosmac/Desktop/CodeBase/NeetCode/CsharpSolutions/InterviewCoding/InterviewCoding.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -17,7 +17,7 @@ Implement a method called `calculateRunningTotal(int n, List<int> list_of_number
 
 namespace InterviewCoding
 {
-  class VisagioQ1
+  public class VisagioQ1
   {
     public static int calculateRunningTotal(int n, List<int> list_of_numbers)
     {
@@ -50,12 +50,5 @@ namespace InterviewCoding
         }
     }
 
-    static void Main()
-    {
-        int n = 4;
-        List<int> list_of_numbers = new List<int> { 1, 2, 3, 4 };
-        int result = calculateRunningTotal(n, list_of_numbers);
-        Console.WriteLine(result); // 输出: 10
-    }
   }
 }
