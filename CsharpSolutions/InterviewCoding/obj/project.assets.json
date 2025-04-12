@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/anbosmac/Desktop/CodeBase/NeetCode/CsharpSolutions/InterviewTest/InterviewTest.csproj",
-      "projectName": "InterviewTest",
-      "projectPath": "/Users/anbosmac/Desktop/CodeBase/NeetCode/CsharpSolutions/InterviewTest/InterviewTest.csproj",
+      "projectUniqueName": "/Users/anbosmac/Desktop/CodeBase/NeetCode/CsharpSolutions/InterviewCoding/InterviewCoding.csproj",
+      "projectName": "InterviewCoding",
+      "projectPath": "/Users/anbosmac/Desktop/CodeBase/NeetCode/CsharpSolutions/InterviewCoding/InterviewCoding.csproj",
       "packagesPath": "/Users/anbosmac/.nuget/packages/",
-      "outputPath": "/Users/anbosmac/Desktop/CodeBase/NeetCode/CsharpSolutions/InterviewTest/obj/",
+      "outputPath": "/Users/anbosmac/Desktop/CodeBase/NeetCode/CsharpSolutions/InterviewCoding/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/anbosmac/.nuget/NuGet/NuGet.Config"

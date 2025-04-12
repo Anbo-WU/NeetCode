@@ -1,8 +1,24 @@
 using System;
 using System.Collections.Generic;
 
-class VisagioTest
+/* 
+Implement a method called `calculateRunningTotal(int n, List<int> list_of_numbers)` that returns a computed result based on the following rules:
+
+1. For a given list of integers:
+   - Compute the product of all numbers.
+   - Compute the sum of all numbers.
+   - If the product is even:
+       - If the list contains 0, return `sum * 2`;
+       - Otherwise, return `sum`.
+   - If the product is odd:
+       - If the list contains 3, return `product + 1`;
+       - Otherwise, return `product`.
+*/
+
+namespace InterviewCoding
 {
+  class VisagioQ1
+  {
     public static int calculateRunningTotal(int n, List<int> list_of_numbers)
     {
         int product = 1;
@@ -41,4 +57,5 @@ class VisagioTest
         int result = calculateRunningTotal(n, list_of_numbers);
         Console.WriteLine(result); // 输出: 10
     }
+  }
 }
