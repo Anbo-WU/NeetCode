@@ -1,7 +1,6 @@
-using System;
-using System.Collections.Generic;
+package VisagioGP;
 
-/* 
+/**
 Implement a method called `calculateRunningTotal(int n, List<int> list_of_numbers)` that returns a computed result based on the following rules:
 
 1. For a given list of integers:
@@ -15,39 +14,37 @@ Implement a method called `calculateRunningTotal(int n, List<int> list_of_number
        - Otherwise, return `product`.
 */
 
-namespace InterviewCoding
-{
-  public class VisagioQ1
-  {
-    public static int calculateRunningTotal(int n, List<int> list_of_numbers)
-    {
+public class VisagioQ1 {
+    public static int calculateRuningTotal(int n, int[] list_of_numbers){
         int product = 1;
         int sum = 0;
-        bool hasZero = false;
-        bool hasThree = false;
+        boolean hasZero = false;
+        boolean hasThree = false;
 
-        foreach (int num in list_of_numbers)
-        {
-            sum += num;
-            product *= num;
-            if (num == 0) hasZero = true;
-            if (num == 3) hasThree = true;
+        for(int i : list_of_numbers){
+            product *= i;
+            sum += i;
+
+            if(i == 0){
+                hasZero = true;
+            }
+            if (i == 3){
+                hasThree = true;
+            }
         }
 
-        if (product % 2 == 0) // even
-        {
-            if (hasZero)
+        if (product % 2 == 0){ // list number is even
+            if (hasZero){
                 return sum * 2;
-            else
+            }else {
                 return sum;
-        }
-        else // odd
-        {
-            if (hasThree)
+            }
+        }else { // list number is odd
+            if (hasThree){
                 return product + 1;
-            else
+            }else {
                 return product;
+            }
         }
     }
-  }
 }
