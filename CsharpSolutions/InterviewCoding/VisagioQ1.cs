@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-/* 
+/*
 Implement a method called `calculateRunningTotal(int n, List<int> list_of_numbers)` that returns a computed result based on the following rules:
 
 1. For a given list of integers:
