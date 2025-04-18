@@ -49,7 +49,7 @@ import java.util.*;
  * 0 <= NumItems, NewNumItems, NumProcessedItems <= 10^3
  * It is guaranteed that BasketChange will only happen for the customers who are still in the store.
  */
-import java.util.*;
+
 
 public class SupermarketCheckout {
     // 每条线上的顾客队列
