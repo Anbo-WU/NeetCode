@@ -6,6 +6,14 @@ import java.util.Arrays;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
+ Input to the program is specified using a simple text format. The format and details of parsing are not relevant to answering the question but custom input can be used to help with development and debugging.
+ The first line of input contains an integer N that denotes the number of instructions.Each of the N subsequent lines contains one of the instructions as in the format below:
+ - CustomerEnter <CustomerId> <LineNumber> <NumItems>
+ - BasketChange <CustomerId> <NewNumItems>
+ - LineService <LineNumber> <NumProcessedItems>
+ - LinesService
+ Some example inputs and their expected outputs are described below.
+
 Sample Case 1:
  Input:
  5
@@ -86,8 +94,8 @@ public class SupermarketCheckoutTest {
         checkout.onLineService(1, 5); // process line 1: customer 3 (2 items) + 123 (4 left)
 
         String[] lines = outputStream.toString().trim().split("\\R");
-        System.out.println("实际输出：" + Arrays.toString(lines));
-        originalOut.println("实际输出：" + Arrays.toString(lines));
+        // System.out.println("Actual Output：" + Arrays.toString(lines));
+        // originalOut.println("Actual Output：" + Arrays.toString(lines));
         assertArrayEquals(new String[]{"3", "123"}, lines);
     }
 }

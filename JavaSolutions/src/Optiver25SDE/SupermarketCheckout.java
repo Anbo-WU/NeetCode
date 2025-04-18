@@ -49,57 +49,64 @@ import java.util.*;
  * 0 <= NumItems, NewNumItems, NumProcessedItems <= 10^3
  * It is guaranteed that BasketChange will only happen for the customers who are still in the store.
  */
+import java.util.*;
+
 public class SupermarketCheckout {
-    // 记录每条线上的顾客队列
+    // 每条线上的顾客队列
     private final Map<Long, LinkedList<Customer>> lineQueues = new HashMap<>();
 
-    // 记录所有顾客的所在队列和当前状态
+    // 所有顾客信息
     private final Map<Long, Customer> customerMap = new HashMap<>();
 
     private static class Customer {
         long customerId;
         long lineNumber;
-        long numItems;
+        long numItems;         // 当前要处理的商品数
+        long initialNumItems;  // 初始加入时的商品数，用于 BasketChange 参考
 
         public Customer(long customerId, long lineNumber, long numItems) {
             this.customerId = customerId;
             this.lineNumber = lineNumber;
             this.numItems = numItems;
+            this.initialNumItems = numItems;
         }
     }
-    public SupermarketCheckout(){}
 
-    public void onCustomerEnter(long customerId, long lineNumber, long numItems){
+    public SupermarketCheckout() {}
+
+    public void onCustomerEnter(long customerId, long lineNumber, long numItems) {
         Customer customer = new Customer(customerId, lineNumber, numItems);
         lineQueues.putIfAbsent(lineNumber, new LinkedList<>());
-        lineQueues.get(lineNumber).addLast(customer);  // 加入队尾
+        lineQueues.get(lineNumber).addLast(customer);
         customerMap.put(customerId, customer);
-        //TODO Implement
     }
 
-    public void onBasketChange(long customerId, long newNumItems){
+    public void onBasketChange(long customerId, long newNumItems) {
         Customer customer = customerMap.get(customerId);
         if (customer == null) return;
 
-        long oldItems = customer.numItems;
-        customer.numItems = newNumItems;
+        // 实际新商品数 = newNumItems - (initial - current)
+        long processedItems = customer.initialNumItems - customer.numItems;
+        long newCurrentNum = newNumItems - processedItems;
 
-        if (newNumItems == 0) {
-            // 离开商店
+        // 如果商品清空了，离开队列
+        if (newCurrentNum <= 0) {
             lineQueues.get(customer.lineNumber).remove(customer);
             customerMap.remove(customerId);
             onCustomerExit(customerId);
-        } else if (newNumItems > oldItems) {
-            // 需要移到队尾
+        } else {
+            // 更新初始值和当前值
+            customer.initialNumItems = newNumItems;
+            customer.numItems = newCurrentNum;
+
+            // 若添加了商品，移动到队尾
             LinkedList<Customer> queue = lineQueues.get(customer.lineNumber);
             queue.remove(customer);
             queue.addLast(customer);
         }
-        // 减少物品数时不变位置
-        //TODO Implement
     }
 
-    public void onLineService(long lineNumber, long numProcessedItems){
+    public void onLineService(long lineNumber, long numProcessedItems) {
         LinkedList<Customer> queue = lineQueues.get(lineNumber);
         if (queue == null || queue.isEmpty()) return;
 
@@ -115,13 +122,11 @@ public class SupermarketCheckout {
                 numProcessedItems = 0;
             }
         }
-        //TODO Implement
     }
 
-    public void onLinesService(){
-        // 所有 line 中都处理一个 item
+    public void onLinesService() {
         List<Long> sortedLines = new ArrayList<>(lineQueues.keySet());
-        Collections.sort(sortedLines); // 越小的 lineNumber 越靠近出口
+        Collections.sort(sortedLines);
 
         for (long lineNumber : sortedLines) {
             LinkedList<Customer> queue = lineQueues.get(lineNumber);
@@ -138,8 +143,7 @@ public class SupermarketCheckout {
         }
     }
 
-    public void onCustomerExit(long customerId){
-        //Don't change this implementation.
+    public void onCustomerExit(long customerId) {
         System.out.println(customerId);
     }
 }
