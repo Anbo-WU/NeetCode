@@ -29,6 +29,7 @@ package Susquehanna;
  *
  */
 public class wordSuffix {
+    // FIXME: this method is right but the time complexity is too high: O(n^2). To meet the requirement, I did another method named wordSuffix2.
     public static int solution4(String[] words) {
         int count = 0;
         int n = words.length;
