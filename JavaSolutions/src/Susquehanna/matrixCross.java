@@ -76,3 +76,5 @@ public class matrixCross {
         return true;
     }
 }
+
+//FIXME: there must be a slight problem for this solution. Cus I cannot pass one of the hidden tests(19/20 passed).

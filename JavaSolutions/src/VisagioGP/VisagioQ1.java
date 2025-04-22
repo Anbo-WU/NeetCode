@@ -1,6 +1,10 @@
 package VisagioGP;
 
 /**
+ *
+ * This company didn't provide the Java Programming, so I had to use C# to solve this question.
+ * But now I add the Java solution here. Pretty much the same.
+ *
 Implement a method called `calculateRunningTotal(int n, List<int> list_of_numbers)` that returns a computed result based on the following rules:
 
 1. For a given list of integers:
