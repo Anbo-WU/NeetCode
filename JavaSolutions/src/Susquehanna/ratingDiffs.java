@@ -41,7 +41,7 @@ package Susquehanna;
  * 	• [highest_rating_ever, current_rating]
  */
 public class ratingDiffs {
-    public static int[] solution(int[] diffs) {
+    public static int[] solution9(int[] diffs) {
         int currentRating = 1500;
         int maxRating = 1500;
 
